@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="content">
+    <h1>Longest word game</h1>
+    <h3>What's your best shot with this grid?</h3>
+    <p>
+      <%= @grid %>
+    </p>
+    <form action="score" method="get">
+      <div class="form-group">
+        <input type="text" id="answer" name="attempt" class="form-control" autofocus placeholder="...">
+        <input type="hidden" name="grid" value="<%= @grid %>">
+        <input type="hidden" name="score" value="@score">
+        <input type="hidden" name="start_time" value="<%= @start_time %>">
+      </div>
+      <input type="submit" class="btn btn-success" value="Score!">
+    </form>
+  </div>
+</div>
